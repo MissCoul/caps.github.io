@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>simplestyle_4</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <style>
+    /* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'trebuchet ms', arial, sans-serif;
+    background: #ffffff;
+    color: #555;
+    line-height: 1.7em;
+}
+
+/* Header Styles */
+#header {
+    background: url('style/banner.jpeg') no-repeat center center / cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#logo_text h1, #logo_text h3 {
+    margin: 5px 0; /* small margin for spacing */
+    width: 100%;
+}
+
+#logo_text h1 {
+    font-size: 2em; /* Responsive font size for h1 */
+}
+
+#logo_text h3 {
+    font-size: 1.2em; /* Responsive font size for h3 */
+}
+
+/* Responsive settings */
+@media (max-width: 768px) {
+    #logo_text h1 {
+        font-size: 1.5em;
+    }
+
+    #logo_text h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo_text h1 {
+        font-size: 1.2em;
+    }
+
+    #logo_text h3 {
+        font-size: 0.9em;
+    }
+}
+
+/* Content Styles */
+#content {
+    padding: 20px;
+    text-align: justify; /* Ensures content is justified */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.image-container img {
+    width: calc(50% - 10px); /* Width calculation to include padding */
+    margin: 5px;
+    height: auto;
+}
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header" style="background-image: url('style/banner.jpeg'); background-size: cover; background-position: center; color: white;">
+      <div id="logo">
+        <div id="logo_text">
+         
+        </div>
+      </div>
+      
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+  
+      <div id="content">
+         <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1>Energy Insight: Predictive Modeling for Optimized Consumption Strategies</h1>
+         <h5>By Minata Coulibaly & Ananya Kaza</h5>
+        <!-- insert the page content here -->
+        <div style="display: flex; justify-content: space-between; padding: 20px; flex-wrap: wrap;">
+          <!-- Background Section -->
+          <div style="flex: 1; padding: 10px; min-width: 300px;">
+            <h2>Background</h2>
+            <p>This Project conducts a thorough analysis of past energy consumption trends and provides insights into future energy demand. We start our study by looking closely at past trends in energy consumption to find the main forces and trends that have influenced energy demand throughout time. The study employs various statistical modeling techniques to forecast energy consumption across industries and regions. Findings highlight shifts in consumption patterns and offer practical recommendations for utility companies to adapt to evolving trends and promote energy sustainability.</p>
+          </div>
+          
+          <!-- Motivation Section -->
+          <div style="flex: 1; padding: 10px; min-width: 300px;">
+            <h2>Motivation</h2>
+            <p>This project tackles the energy sector's supply and demand mismatch by proposing strategies to improve market share, reduce energy waste, and promote sustainability through energy-efficient methods. It emphasizes demand-side management tactics, energy efficiency initiatives, and collaboration among stakeholders to address the challenges and seize opportunities for innovation. Overall, the paper offers actionable solutions to create a more robust, effective, and sustainable energy ecosystem.</p>
+          </div>
+          
+          <!-- Objectives Section -->
+          <div style="flex: 1; padding: 10px; min-width: 300px;">
+            <h2>Objectives</h2>
+            <p>We aim to formulate a comprehensive approach to address the supply-demand imbalance in the energy sector. We focused on integrating external factors, segmenting users based on lifestyle and consumption patterns, validating model performance, and forecasting energy consumption for various user segments. The overarching objective is to provide actionable recommendations for stakeholders to achieve sustainability goals while driving revenue growth.</p>
+          </div>
+        </div>
+        
+        <h1>Datasets & Methodoly</h1>
+        <h3>Datasets</h3>
+        <p>
+          The dataset used for this analysis consists of smart meter readings from London households spanning from November 2011 to February 2014, totaling 5,567 households and 3,510,433 observations. It includes nine features providing insightful information on energy consumption patterns. Key features include House_ID for tracking households, Date for temporal analysis, Energy_Mean for average consumption, and Energy_Sum for total consumption.
+        </p>
+        <p>
+          The dataset also incorporates household information like stdorTou indicating tariff type (standard or time-of-use), Acorn for demographic segmentation, and Category for home type classification. Additionally, weather and holiday data from the Dark Sky API enrich the analysis. Holiday data includes Holiday_Type and Holiday_Date, while weather data offers insights like Temperature_Max and Cloud cover.
+        </p>
+        <p>
+          These additional datasets enhance the understanding of energy consumption patterns by accounting for seasonal fluctuations and external factors like holidays and weather conditions. The aim is to create more accurate predictive models and provide insights for energy-saving initiatives and sustainable energy management.
+        </p>
+        <h1>Methodology</h1>
+        <p>
+          This paper utilizes a systematic approach combining preprocessing techniques, feature selection methods, clustering analysis, and predictive modeling algorithms to analyze and predict energy usage patterns in London households.
+
+        <h4>Preprocessing</h4>
+The data undergoes preprocessing to ensure quality and suitability for analysis. This involves merging datasets, handling missing values, and imputing data using the K-nearest neighbors (KNN) algorithm.
+        <p>
+        <h4>Feature Selection</h4> 
+
+        <p>ANOVA is used to identify if categorical variables significantly affect a continuous outcome, with a focus on variance between and within groups. A low p-value indicates a potentially important feature. Pearson Correlation assesses the linear relationship between quantitative variables. Correlations near 1 or -1 signify strong relationships, which could mean redundancy among features.</p>
+<p>Interpreting correlations requires context. For instance, in the UK, low air conditioning usage despite high temperatures can be explained by cultural habits and architectural design optimized for heat retention. Similarly, the UK's temperate climate and cloud cover result in lower dew points and UV index values, contrary to what might be expected in other geographic locations. Understanding these subtleties is key to meaningful feature selection and model construction.</p>
+         <h4>Clustering Analysis</h4> 
+        <p>user segmentation involves dividing a customer base into groups based on shared characteristics like age, gender, or spending habits, allowing for tailored marketing strategies. The study used Multiple Correspondence Analysis (MCA) for segmentation, handling multiple categorical variables. Key variables included energy consumption metrics and the Acorn classification, a UK-specific categorization reflecting demographics and lifestyle. The analysis yielded clusters with distinct energy usage patterns and socioeconomic statuses. For instance, one cluster with high energy consumption was associated with affluent achievers, another with lower consumption corresponded to financially stretched communities, and a third was tied to comfortable communities but facing certain difficulties. This segmentation aids in understanding customer behavior and developing targeted marketing approaches.</p>
+        <div class="image-container">
+          <img src="style/Picture1.png" alt="example graphic" />
+          <img src="style/Picture2.png" alt="example graphic" />
+        </div>
+        <p></p>
+        <h5>Cluster profiling </h5>
+        <ul>
+          <li>Clusters (0, 1, 2): Individuals or households are segmented into three clusters, which are differentiated by similar patterns of energy consumption and socio-economic backgrounds. This suggests strategic data analysis to identify and categorize comparable units within the dataset.</li>
+          <li>Energy Consumption: 
+            <ul>
+              <li>Cluster 0: The highest average energy consumption at 16.61 kWh, indicating that members likely live in colder climates, larger homes, or have energy-intensive lifestyles.</li>
+              <li>Cluster 1: The lowest energy consumption at 9.06 kWh, which might reflect energy-saving habits or smaller household sizes.</li>
+              <li>Cluster 2: Moderate energy usage at 10.51 kWh, possibly reflecting average household conditions.</li>
+            </ul>
+          </li>
+          <li>StdorToU: All clusters are on a standard ('Std') energy tariff, indicating no differentiation in tariff type across the clusters.
+          </li>
+          <li>Acorn Categories:
+            <ul>
+              <li>Cluster 0: Categorized under 'E - Career Climbers', aligning with affluent achievers who have higher energy needs.</li>
+              <li>Cluster 1: Labeled 'F - Countryside Communities', and falling under 'Category 4 - Financially Stretched', suggesting limited financial resources impact their energy consumption.</li>
+              <li>Cluster 2: Identified as 'Q - Difficult Circumstances' but falls under 'Category 3 - Comfortable Communities', indicating a complex socio-economic positioning with both comforts and challenges.</li>
+            </ul>
+        </ul>
+        <p>These insights help in understanding the diverse energy consumption patterns and socio-economic contexts of each cluster, allowing for tailored strategies in energy management and community support initiatives. </p>
+        <h4>Predictive Modeling</h4> 
+        <p>The Autoregressive Integrated Moving Average with Exogenous variables (ARIMAX) technique was used for predictive modeling for each user type. ARIMAX incorporates external factors like weather and holiday data to accurately forecast future energy demand by considering both autoregressive and moving average components.</p>
+        <h5>For Cluster 0</h5>
+        <p>The ARIMAX model used in cluster analysis for Cluster 0 incorporates exogenous variables like 'weather' and 'Holiday' to predict future values based on historical data. The evaluation of the model involves detailed diagnostic plots to assess its residuals and overall fit:</p>
+        <ul>
+          <li>Standardized Residuals Plot: Shows residuals distributed over time without any apparent trend, indicating effective data capture by the model.</li>
+          <li>Density Plot and Histogram Estimated: Reveals that residuals are nearly normally distributed with some minor deviations, indicating a close fit to the expected normal distribution.</li>
+          <li>Normal Q-Q Plot: Points out slight deviations from normality at the distribution's tails, suggesting the presence of outliers or heavy tails.</li>
+          <li>Correlogram (ACF Plot): Demonstrates minimal autocorrelation among residuals, confirming the model's efficiency in capturing time-dependent data structures.</li>
+        </ul>
+        <div class="image-container">
+          <img src="style/Picture3.png" alt="example graphic" />
+          <img src="style/Picture4.png" alt="example graphic" />
+        </div>
+        <p></p>
+        <h5>For Cluster 1</h5>
+        <ul>
+          <li>Statistical Significance: The log transformation used in the model achieved a highly significant p-value (1.5e-20), indicating strong statistical evidence that this transformation improved the model's adherence to the assumptions necessary for valid inference.
+            </li>
+          <li>Residuals Analysis: Diagnostic plots show that residuals generally exhibit no autocorrelation or non-constant variance, suggesting the model is well-specified for this cluster. However, there are indications of slight deviations in the residuals’ normality, particularly at the tails as observed in the Q-Q plot. This points to the presence of outliers or extreme values that do not conform perfectly to a normal distribution.</li>
+        </ul>
+        <div class="image-container">
+          <img src="style/Picture5.png" alt="example graphic" />
+          <img src="style/Picture6.png" alt="example graphic" />
+        </div>
+        <h5>For Cluster 2</h5>
+        <ul>
+          <li>Statistical Significance: A p-value of 0.0 in the diagnostics suggests an extremely significant result, indicating strong evidence that the model's parameters are significantly different from zero and thus meaningfully contributing to predicting the response variable. This statistically significant result implies a high confidence in the model's fit.
+            </li>
+          <li>Residual Analysis: Diagnostic plots suggest that there are no substantial patterns of autocorrelation or non-random structure in the residuals, indicating a well-fitted model. However, minor deviations from normality are noted, particularly in the tails of the Q-Q plot, highlighting potential outliers or extremities in the data.</li>
+        </ul>
+        <div class="image-container">
+          <img src="style/Picture7.png" alt="example graphic" />
+          <img src="style/Picture8.png" alt="example graphic" />
+        </div>
+        <p></p>
+        <h4>Conclusion</h4>
+        <p>Our research explored the impact of weather, holidays, and lifestyle choices on energy consumption in London households, uncovering significant influences. For instance, temperature variations directly affected heating and cooling needs, while holiday periods typically saw peaks in energy use. Lifestyle factors such as family size and socioeconomic status also played crucial roles, emphasizing the importance of demographic segmentation in understanding energy consumption patterns.</p>
+        <p>Through clustering analysis using Multiple Correspondence Analysis (MCA), we identified distinct customer segments based on energy usage, demographics, and behavior. This segmentation allowed us to tailor strategies for enhancing energy efficiency and sustainability.</p>
+        <p>The best-performing predictive model was an ARIMAX model with a log transformation. This model adeptly integrated exogenous variables like weather and holidays, capturing temporal energy consumption trends with improved accuracy and reliability. These findings not only offer actionable insights for energy providers but also support policymaking aimed at fostering a sustainable energy future for London and potentially broader applications.</p> 
+      </div>
+    </div>
+   
+  </div>
+</body>
+</html>
